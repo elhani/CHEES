@@ -121,50 +121,7 @@ function Movecheval(cellX,cellY){
                   console.log(cellY);
                   return possiblemove.length;
                               }
-                                              
-function shortcircuit(cellX, cellY,dp, xcordinatpointA, ycordinatpointA){
-                  
-    var dp=[xdp][ydp];
-    
-    
-  var xcordinatpointA = 7;
-   var ycordinatpointA=1;
-               var cellY=0;
-                 var cellX=0;
  
-    
-var dp = Object.create(echec)  ;
-var xdp ;
-  var ydp ;
-
-
-     
-       xdp=Math.abs( cellX-xcordinatpointA);
-       ydp=Math.abs(cellY-ycordinatpointA);
-
-  
-{ 
-     
-    if (cellX == xcordinatpointA && cellY == ycordinatpointA) 
-    return (dp[xdp][ydp]);  
-    
- else                                        
-if  
-  (cellX< xcordinatpointA)  
-{ if (cellY<=ycordinatpointA) 
-  {
-    cellX==cellX+2;cellY==cellX+1;
-    
-    return (dp[xdp][ydp]); 
-  }
-
-  
-else{
-  cellX==cellX+2;cellY==cellX-1;  return (dp[xdp][ydp]); 
- 
-}
-} 
-
 
 if(cellY<=ycordinatpointA)
          {
