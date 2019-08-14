@@ -1,4 +1,3 @@
-
 //creation matrix 2 dimention 
 M = 8;
 var echec = new Array(M) ;
@@ -18,8 +17,8 @@ var cheval;
 
 //creation objet cheval
 var cheval = Object.create(echec);
-                         var cellX ;
-                         var cellY;
+cellX=0;
+cellY=0;
 
                          cheval.cellX ;
                          cheval.cellY ;
@@ -46,8 +45,7 @@ var pointA = Object.create(echec)  ;
                           var xcordinatpointA;
 
 
-                          pointA.xcordinatpointA=7;
-                          pointA.ycordinatpointA=1;
+                          
 
                           console.log(pointA);
                                                 
@@ -121,12 +119,10 @@ function Movecheval(cellX,cellY){
                                               
   
 
-     var findMinSteps = function(cheval, poinA) {
-
+     var findMinSteps = function(cheval, pointA) {
+        
       var distance = []
-      var moves = 
-
-        [  [1,2],  [1,-2], [-1,2], [2,1],   [2,-1],  [-2,1],  [-2,-1], ]
+      var moves =  [  [1,2],  [1,-2], [-1,2], [2,1],   [2,-1],  [-2,1],  [-2,-1], ]
      
       var echec = []
       var M=10;
@@ -168,10 +164,6 @@ function Movecheval(cellX,cellY){
                               var pointA = [4,1];
                            
                               console.log(findMinSteps(cheval, pointA));
-                         
-     
-
-
 
       
        
