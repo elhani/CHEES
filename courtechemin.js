@@ -37,7 +37,7 @@ cellY=0;
                         console.log(chevalMoves);
 
                         console.log(cheval);
-//le pointA chercher par le cheval
+//creation Object  pointA chercher par le cheval
 
 var pointA = Object.create(echec)  ;
                         
@@ -159,10 +159,10 @@ function Movecheval(cellX,cellY){
                                 return 'Not possible'
                               }
                               
-
+      
                               var cheval = [0,0];
                               var pointA = [4,1];
-                           
+                           // afiche le nombre minimum de pas pour ateidre le pointA
                               console.log(findMinSteps(cheval, pointA));
 
       
