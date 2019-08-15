@@ -37,7 +37,7 @@ cellY=0;
                         console.log(chevalMoves);
 
                         console.log(cheval);
-//creation Object  pointA chercher par le cheval
+//le pointA chercher par le cheval
 
 var pointA = Object.create(echec)  ;
                         
@@ -133,11 +133,11 @@ function Movecheval(cellX,cellY){
         }
       }                      
                                 
-                                echec[cheval[0]][cheval[1]] = 1;
+                                echec[cheval[0]][cheval[1]] =1  ;
                                 distance.push([cheval[0],cheval[1],0])
                                 while(distance.length > 0 ) {
                                   var current = distance.shift()
-                                 
+                                  console.log(distance);
                                   for( var i=0 ; i < moves.length; i++ ) {
                                     var move = moves[i];
                                     var count = current[2] + 1;
@@ -145,12 +145,12 @@ function Movecheval(cellX,cellY){
                                     var celly = current[1] + move[1];
                                     if( cellx >= 0 && celly >=0 && cellx < M && celly < M && echec[cellx ][celly ] != 1 ) {
                                       if( cellx == pointA[0] && celly == pointA[1] ) {
-                                        return (count)
+                                        return (count  )
                                         
                                       }
                                       else {
                                         echec[cellx][celly] = 1;
-                                        distance.push([cellx, celly, count]);
+                                        distance.push([cellx, celly,count]);
                                        
                                       }
                                     }
@@ -159,17 +159,9 @@ function Movecheval(cellX,cellY){
                                 return 'Not possible'
                               }
                               
-      
+
                               var cheval = [0,0];
-                              var pointA = [4,1];
-                           // afiche le nombre minimum de pas pour ateidre le pointA
-                              console.log(findMinSteps(cheval, pointA));
-
-      
-       
-
-     
-
-       
-
-                            
+                              var pointA = [5,2];
+                           
+                              console.log( 'le nombre mini de pas pour atiendre pointA : ' +findMinSteps(cheval, pointA));
+                             
