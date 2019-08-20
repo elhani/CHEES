@@ -33,7 +33,7 @@ var findMinSteps = function(depart, pointA) {
       else {echec[cellx][celly] = 1;
                      
             trajet.push([cellx, celly]);}}}}  
-                return trajet
+                return "NOT DIFINE"
                    }
          var depart = [0,0]; var pointA = [4,1];
                           
