@@ -11,7 +11,7 @@ console.log(echec)
 var findMinSteps = function(depart, pointA) {
       
   var trajet = []
-  var moves =  [  [1,2],  [1,-2], [-1,2], [2,1],   [2,-1],  [-2,1],  [-2,-1], ]
+  var moves =  [ [1,2],  [1,-2], [-1,2], [-1,-2], [2,1],  [2,-1],   [-2,1],[-2,-1] ]
                  
    echec[depart[0]][depart[1]] !=0  ;
   trajet.push([depart[0],depart[1],0]);
@@ -34,7 +34,7 @@ var findMinSteps = function(depart, pointA) {
           trajet.push([cellx, celly]);}}}}  
               return "NOT DIFINE"
                  }
-       var depart = [0,0]; var pointA = [4,1];
+       var depart = [0,0]; var pointA = [2,3];
                         
 console.log(depart,pointA)
-console.log( 'le nombre mini de pas pour atiendre pointA : ' +findMinSteps(depart, pointA), ); 
+console.log( 'le nombre mini de pas pour atiendre pointA : ' +findMinSteps(depart, pointA), );
