@@ -8,13 +8,20 @@ for( var i=0; i < M; i++ ) {
   }
 } 
 console.log(echec)
-var findMinSteps = function(depart, pointA) {
+
+
+var cheval=Object.create(echec);
+
+
+var pointA=Object.create(echec);
+
+var findMinSteps = function(cheval, pointA) {
       
   var trajet = []
   var moves =  [ [1,2],  [1,-2], [-1,2], [-1,-2], [2,1],  [2,-1],   [-2,1],[-2,-1] ]
                  
-   echec[depart[0]][depart[1]] !=0  ;
-  trajet.push([depart[0],depart[1],0]);
+   echec[cheval[0]][cheval[1]] !=0  ;
+  trajet.push([cheval[0],cheval[1],0]);
 
  while(trajet.length != 0 ) {
  var current = trajet.shift()
@@ -34,7 +41,7 @@ var findMinSteps = function(depart, pointA) {
           trajet.push([cellx, celly]);}}}}  
               return "NOT DIFINE"
                  }
-       var depart = [0,0]; var pointA = [2,3];
+       var cheval = [0,0]; var pointA = [2,2];
                         
-console.log(depart,pointA)
-console.log( 'le nombre mini de pas pour atiendre pointA : ' +findMinSteps(depart, pointA), );
+console.log(cheval,pointA)
+console.log( 'le nombre mini de pas pour atiendre pointA : ' +findMinSteps(cheval, pointA), ); 
